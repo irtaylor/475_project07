@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		262FDCD11CFF980A0076463F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 262FDCD01CFF980A0076463F /* main.cpp */; };
+		262FDCD81CFF98C50076463F /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262FDCD71CFF98C50076463F /* OpenCL.framework */; };
+		262FDCDA1CFF98CA0076463F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262FDCD91CFF98CA0076463F /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		262FDCCD1CFF980A0076463F /* 475_project07 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 475_project07; sourceTree = BUILT_PRODUCTS_DIR; };
 		262FDCD01CFF980A0076463F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		262FDCD71CFF98C50076463F /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = ../../../../../../../../../System/Library/Frameworks/OpenCL.framework; sourceTree = "<group>"; };
+		262FDCD91CFF98CA0076463F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../../../../../../System/Library/Frameworks/OpenGL.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262FDCDA1CFF98CA0076463F /* OpenGL.framework in Frameworks */,
+				262FDCD81CFF98C50076463F /* OpenCL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +47,8 @@
 		262FDCC41CFF980A0076463F = {
 			isa = PBXGroup;
 			children = (
+				262FDCD91CFF98CA0076463F /* OpenGL.framework */,
+				262FDCD71CFF98C50076463F /* OpenCL.framework */,
 				262FDCCF1CFF980A0076463F /* 475_project07 */,
 				262FDCCE1CFF980A0076463F /* Products */,
 			);
