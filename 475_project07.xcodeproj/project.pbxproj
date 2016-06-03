@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		262FDCD11CFF980A0076463F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 262FDCD01CFF980A0076463F /* main.cpp */; };
-		262FDCD81CFF98C50076463F /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262FDCD71CFF98C50076463F /* OpenCL.framework */; };
-		262FDCDA1CFF98CA0076463F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262FDCD91CFF98CA0076463F /* OpenGL.framework */; };
+		262FDCD11CFF980A0076463F /* taylori_particles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 262FDCD01CFF980A0076463F /* taylori_particles.cpp */; };
+		2699BA3F1D00D3820055C674 /* libiomp5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2699BA3E1D00D3820055C674 /* libiomp5.dylib */; };
+		2699BA431D00D44B0055C674 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2699BA421D00D44B0055C674 /* OpenCL.framework */; };
+		2699BA451D00D4520055C674 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2699BA441D00D4520055C674 /* OpenGL.framework */; };
+		2699BA481D00D8BD0055C674 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2699BA471D00D8BD0055C674 /* GLUT.framework */; };
+		2699BA5E1D01099E0055C674 /* GLUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2699BA5D1D01099E0055C674 /* GLUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,9 +29,13 @@
 
 /* Begin PBXFileReference section */
 		262FDCCD1CFF980A0076463F /* 475_project07 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 475_project07; sourceTree = BUILT_PRODUCTS_DIR; };
-		262FDCD01CFF980A0076463F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		262FDCD71CFF98C50076463F /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = ../../../../../../../../../System/Library/Frameworks/OpenCL.framework; sourceTree = "<group>"; };
-		262FDCD91CFF98CA0076463F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../../../../../../System/Library/Frameworks/OpenGL.framework; sourceTree = "<group>"; };
+		262FDCD01CFF980A0076463F /* taylori_particles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = taylori_particles.cpp; sourceTree = "<group>"; };
+		2699BA3E1D00D3820055C674 /* libiomp5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiomp5.dylib; path = ../../../../../../../../../usr/local/lib/libiomp5.dylib; sourceTree = "<group>"; };
+		2699BA401D00D3E40055C674 /* particles.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; name = particles.cl; path = "/Users/iantaylor/Desktop/School/OSU CS Post-Bacc/OSU_Term7/CS475_ParallelProgramming/475_Projects/475_project07/475_project07/particles.cl"; sourceTree = "<absolute>"; };
+		2699BA421D00D44B0055C674 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = ../../../../../../../../../System/Library/Frameworks/OpenCL.framework; sourceTree = "<group>"; };
+		2699BA441D00D4520055C674 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../../../../../../System/Library/Frameworks/OpenGL.framework; sourceTree = "<group>"; };
+		2699BA471D00D8BD0055C674 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../../../../../../../System/Library/Frameworks/GLUT.framework; sourceTree = "<group>"; };
+		2699BA5D1D01099E0055C674 /* GLUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUI.framework; path = ../../../../../../../../../Library/Frameworks/GLUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,8 +43,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				262FDCDA1CFF98CA0076463F /* OpenGL.framework in Frameworks */,
-				262FDCD81CFF98C50076463F /* OpenCL.framework in Frameworks */,
+				2699BA3F1D00D3820055C674 /* libiomp5.dylib in Frameworks */,
+				2699BA5E1D01099E0055C674 /* GLUI.framework in Frameworks */,
+				2699BA481D00D8BD0055C674 /* GLUT.framework in Frameworks */,
+				2699BA451D00D4520055C674 /* OpenGL.framework in Frameworks */,
+				2699BA431D00D44B0055C674 /* OpenCL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +57,7 @@
 		262FDCC41CFF980A0076463F = {
 			isa = PBXGroup;
 			children = (
-				262FDCD91CFF98CA0076463F /* OpenGL.framework */,
-				262FDCD71CFF98C50076463F /* OpenCL.framework */,
+				2699BA3D1D00D35F0055C674 /* Frameworks */,
 				262FDCCF1CFF980A0076463F /* 475_project07 */,
 				262FDCCE1CFF980A0076463F /* Products */,
 			);
@@ -65,9 +74,22 @@
 		262FDCCF1CFF980A0076463F /* 475_project07 */ = {
 			isa = PBXGroup;
 			children = (
-				262FDCD01CFF980A0076463F /* main.cpp */,
+				2699BA401D00D3E40055C674 /* particles.cl */,
+				262FDCD01CFF980A0076463F /* taylori_particles.cpp */,
 			);
 			path = 475_project07;
+			sourceTree = "<group>";
+		};
+		2699BA3D1D00D35F0055C674 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2699BA5D1D01099E0055C674 /* GLUI.framework */,
+				2699BA471D00D8BD0055C674 /* GLUT.framework */,
+				2699BA441D00D4520055C674 /* OpenGL.framework */,
+				2699BA421D00D44B0055C674 /* OpenCL.framework */,
+				2699BA3E1D00D3820055C674 /* libiomp5.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				262FDCD11CFF980A0076463F /* main.cpp in Sources */,
+				262FDCD11CFF980A0076463F /* taylori_particles.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +237,15 @@
 		262FDCD51CFF980A0076463F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CC = "/usr/local/bin/clang-omp";
+				CLANG_ENABLE_MODULES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_CFLAGS = "-fopenmp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -222,6 +253,15 @@
 		262FDCD61CFF980A0076463F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CC = "/usr/local/bin/clang-omp";
+				CLANG_ENABLE_MODULES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_CFLAGS = "-fopenmp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -245,6 +285,7 @@
 				262FDCD61CFF980A0076463F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
