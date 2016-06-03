@@ -76,7 +76,7 @@ const float VMIN =	{   -100. };
 const float VMAX =	{    100. };
 
 
-const int NUM_PARTICLES = 1024*1024;
+const int NUM_PARTICLES = 10*1024;
 const int LOCAL_SIZE    = 32;
 const char *CL_FILE_NAME   = { "particles.cl" };
 const char *CL_BINARY_NAME = { "particles.nv" };
@@ -774,8 +774,18 @@ InitLists( )
     glColor3f( .9f, .9f, 0. );
     glPushMatrix( );
     glTranslatef( -100., -800., 0. );
-    glutWireSphere( 500, 100., 100. );
+    glutWireSphere( 300, 100., 100. );
     glPopMatrix( );
+    
+    
+    // second sphere
+    glColor3f( .9f, .9f, 10. );
+    glPushMatrix( );
+    glTranslatef( -300., -100., 0. );
+    glutWireSphere( 200, 100., 100. );
+    glPopMatrix( );
+    
+    
     glEndList( );
     
     AxesList = glGenLists( 1 );
