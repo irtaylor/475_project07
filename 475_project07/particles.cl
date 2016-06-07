@@ -42,6 +42,7 @@ kernel
 void
 Particle( global point *dPobj, global vector *dVel, global color *dCobj )
 {
+    const float color_mod = 0.002;
 	const float4 G       = (float4) ( 0., -9.8, 0., 0. );
 	const float  DT      = 0.1;
 	const sphere Sphere1 = (sphere)( -100., -800., 0., 300. );
@@ -55,6 +56,35 @@ Particle( global point *dPobj, global vector *dVel, global color *dCobj )
 	vector vp = v + G*DT;
 	pp.w = 1.;
 	vp.w = 0.;
+    
+    // My Color Changes
+    color c = dCobj[gid];
+    
+    if( vp.x >= 0 ){
+        c.r += color_mod;
+    }
+    else{
+        c.r -= color_mod;
+    }
+    
+    if( vp.y >= 0 ){
+        c.g += color_mod;
+    }
+    else{
+        c.g -= color_mod;
+    }
+    
+    if( vp.z >= 0 ){
+        c.b += color_mod;
+    }
+    else{
+        c.b -= color_mod;
+    }
+    
+    dCobj[gid] = c;
+    
+    
+    
 
 	if( IsInsideSphere( pp, Sphere1 ) )
 	{
