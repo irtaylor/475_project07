@@ -7,60 +7,52 @@
 //
 
 
-
-
-
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
 
+
 #define _USE_MATH_DEFINES
 #include <math.h>
 
+#ifdef WIN32
+#include <windows.h>
+#pragma warning(disable:4996)
+#endif
+
+#ifdef WIN32
+#include "glew.h"
+#endif
 
 #ifdef __APPLE__
-    // OpenMP stuff
-    #include <libiomp/omp.h>
 
-    // OpenCL stuff
-    #include <OpenCL/opencl.h>
-    #include <OpenCL/cl_gl.h>
-    #include <OpenCL/cl_gl_ext.h>
-
-    // OpenGL stuff
-    #include <OpenGL/OpenGL.h>
-    #include <GLUT/GLUT.h>
-    #include <GLUI/glui.h>
-
+#include "libiomp/omp.h"
+#include "OpenCL/cl.h"
+#include "OpenCL/cl_gl.h"
+#include "OpenCL/gcl.h"
+#include "OpenGL/gl.h"
+#include "OpenGL/CGLCurrent.h"
+#include "GLUT/GLUT.h"
+#include "GLUI/glui.h"
 
 #else
-    #include <omp.h>
-    #include <GL/gl.h>
-    #include <GL/glu.h>
-    #include "glut.h"
-    #include "glui.h"
+
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include "glut.h"
+#include "glui.h"
+
+#include "CL/cl.h"
+#include "CL/cl_gl.h"
+
 #endif
-
-#ifdef WIN32
-    #include <windows.h>
-    #pragma warning(disable:4996)
-#endif
-
-#ifdef WIN32
-    #include "glew.h"
-#endif
-
-
-
-
-
 
 
 // title of these windows:
 
-const char *WINDOWTITLE = { "OpenCL/OpenGL Particle System -- Joe Parallel" };
+const char *WINDOWTITLE = { "OpenCL/OpenGL Particle System -- Ian Taylor" };
 const char *GLUITITLE   = { "User Interface Window" };
 
 // random parameters:
@@ -76,7 +68,7 @@ const float VMIN =	{   -100. };
 const float VMAX =	{    100. };
 
 
-const int NUM_PARTICLES = 10*1024;
+const int NUM_PARTICLES = 1024*1024;
 const int LOCAL_SIZE    = 32;
 const char *CL_FILE_NAME   = { "particles.cl" };
 const char *CL_BINARY_NAME = { "particles.nv" };
@@ -384,7 +376,7 @@ Display( )
     if( ShowPerformance )
     {
         char str[128];
-        sprintf( str, "%6.1f GigaParticles/Sec", (float)NUM_PARTICLES/ElapsedTime/1000000000. );
+        sprintf( str, "%6.1f MegaParticles/Sec", (float)NUM_PARTICLES/ElapsedTime/1000000. );
         glDisable( GL_DEPTH_TEST );
         glMatrixMode( GL_PROJECTION );
         glLoadIdentity();
